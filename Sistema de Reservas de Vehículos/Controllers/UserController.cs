@@ -14,7 +14,7 @@ namespace Sistema_de_Reservas_de_Vehículos.Controllers
         public IActionResult Index()
         {
             var users = _context.Users.ToList();
-            return View();
+            return View(users);
         }
 
 
