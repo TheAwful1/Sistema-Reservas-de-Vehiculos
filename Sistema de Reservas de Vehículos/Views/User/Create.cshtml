@@ -1,0 +1,30 @@
+﻿
+@{
+    @model Sistema_de_Reservas_de_Vehiculos.Models.User
+
+    <h2>Crear Usuario</h2>
+
+    <form method="post">
+        <div>
+            <label>Nombre</label>
+            <input asp-for="Name" />
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input asp-for="Email" />
+        </div>
+
+        <div>
+            <label>Password</label>
+            <input asp-for="PasswordHash" />
+        </div>
+
+        <div>
+            <label>Rol</label>
+            <input asp-for="Role" />
+        </div>
+
+        <button type="submit">Guardar</button>
+    </form>
+}

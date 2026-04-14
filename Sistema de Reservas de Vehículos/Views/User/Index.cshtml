@@ -1,0 +1,24 @@
+﻿@model List<Sistema_de_Reservas_de_Vehiculos.Models.User> 
+@{
+    <h2>Usuarios</h2>
+
+    <a href="/Users/Create">Crear Usuario</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
