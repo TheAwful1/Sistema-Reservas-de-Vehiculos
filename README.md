@@ -47,7 +47,7 @@ Sistema orientado a la gestión de reservas donde los usuarios pueden selecciona
 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repo.git
+git clone https://github.com/TheAwful1/Sistema-Reservas-de-Vehiculos.git
 ```
 ---
 ## 🗄 Base de Datos
