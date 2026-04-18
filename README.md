@@ -39,6 +39,17 @@ Sistema orientado a la gestión de reservas donde los usuarios pueden selecciona
 - Razor Views
 
 ---
+
+---
+
+## 🚀 Cómo ejecutar
+
+1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+```
+---
 ## 🗄 Base de Datos
 
 Ejecutar el script `Database.sql` en SQL Server para crear las tablas necesarias.
