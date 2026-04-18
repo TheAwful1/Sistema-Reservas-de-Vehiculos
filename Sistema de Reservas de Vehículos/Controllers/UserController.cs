@@ -18,7 +18,6 @@ namespace Sistema_de_Reservas_de_Vehículos.Controllers
         }
 
 
-        [HttpGet]
         public IActionResult Create()
         {
             return View();
@@ -29,12 +28,63 @@ namespace Sistema_de_Reservas_de_Vehículos.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Users.Add(user);
+                using (_context)
+                {
+                    _context.Users.Add(user);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            }
+
+            return View(user);
+        }
+
+        // GET: Edit
+        public IActionResult Edit(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null) return NotFound();
+
+            return View(user);
+        }
+        
+
+        // POST: Edit
+        [HttpPost]
+        public IActionResult Edit(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Users.Update(user);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             return View(user);
+        }
+
+
+        // GET: Delete
+        public IActionResult Delete(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null) return NotFound();
+
+            return View(user);
+        }
+
+        // POST: Delete
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,0 +1,32 @@
+﻿@model Sistema_de_Reservas_de_Vehículos.Models.Reservation
+@{
+    
+
+    <h2>Crear Reserva</h2>
+
+    <form method="post">
+
+        <div>
+            <label>Usuario</label>
+            <select asp-for="UserId" asp-items="ViewBag.Users"></select>
+        </div>
+
+        <div>
+            <label>Vehículo</label>
+            <select asp-for="VehicleId" asp-items="ViewBag.Vehicles"></select>
+        </div>
+
+        <div>
+            <label>Fecha Inicio</label>
+            <input asp-for="StartDate" type="date" />
+        </div>
+
+        <div>
+            <label>Fecha Fin</label>
+            <input asp-for="EndDate" type="date" />
+        </div>
+
+        <button type="submit">Reservar</button>
+
+    </form>
+}

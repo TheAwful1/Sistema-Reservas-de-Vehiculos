@@ -1,0 +1,36 @@
+﻿ @model List<Sistema_de_Reservas_de_Vehículos.Models.Vehicle>
+@{
+   
+
+    <h2>Vehículos</h2>
+
+    <a href="/Vehicle/Create">Crear Vehículo</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Placa</th>
+                <th>Precio/Día</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var v in Model)
+            {
+                <tr>
+                    <td>@v.Brand</td>
+                    <td>@v.Model</td>
+                    <td>@v.Plate</td>
+                    <td>@v.PricePerDay</td>
+                    <td>@v.Status</td>
+                    <td>
+                        <a href="/Vehicle/Edit/@v.Id">Editar</a> |
+                        <a href="/Vehicle/Delete/@v.Id">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

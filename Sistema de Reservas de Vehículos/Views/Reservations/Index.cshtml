@@ -1,0 +1,31 @@
+﻿@model List<Sistema_de_Reservas_de_Vehículos.Models.ReservationViewModel>
+@{
+
+    <h2>Reservas</h2>
+
+    <a href="/Reservations/Create">Nueva Reserva</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Vehículo</th>
+                <th>Inicio</th>
+                <th>Fin</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var r in Model)
+            {
+                <tr>
+                    <td>@r.UserName</td>
+                    <td>@r.Vehicle</td>
+                    <td>@r.StartDate.ToShortDateString()</td>
+                    <td>@r.EndDate</td>
+                    <td>@r.TotalPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

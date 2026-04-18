@@ -1,0 +1,14 @@
+﻿@model Sistema_de_Reservas_de_Vehículos.Models.Vehicle
+@{
+
+
+    <h2>Eliminar Vehiculo</h2>
+
+    <p>¿Seguro que quieres eliminar a @Model.Brand?</p>
+
+    <form method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit">Eliminar</button>
+    </form> 
+    <a href="/Vehicle"> Atras</a>
+    }

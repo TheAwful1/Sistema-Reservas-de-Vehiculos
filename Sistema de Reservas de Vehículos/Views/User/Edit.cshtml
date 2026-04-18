@@ -1,0 +1,28 @@
+﻿@model Sistema_de_Reservas_de_Vehículos.Models.User
+@{
+
+
+<h2>Editar Usuario</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label>Nombre</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+
+    <div>
+        <label>Rol</label>
+        <input asp-for="Role" />
+    </div>
+
+    <button type="submit">Guardar</button>
+</form>
+
+}

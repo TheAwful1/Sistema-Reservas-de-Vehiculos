@@ -1,8 +1,9 @@
 ﻿@model List<Sistema_de_Reservas_de_Vehículos.Models.User>
 @{
+    
     <h2>Usuarios</h2>
 
-    <a href="/Users/Create">Crear Usuario</a>
+    <a href="/user/Create">Crear Usuario</a>   
 
     <table>
         <thead>
@@ -17,6 +18,11 @@
                 <tr>
                     <td>@user.Name</td>
                     <td>@user.Email</td>
+                
+                <td>
+                    <a href="/user/Edit/@user.Id">Editar</a> |
+                    <a href="/user/Delete/@user.Id">Eliminar</a>
+                </td>
                 </tr>
             }
         </tbody>

@@ -1,0 +1,35 @@
+﻿@model Sistema_de_Reservas_de_Vehículos.Models.Vehicle
+@{
+
+
+    <h2>Editar Vehiculo</h2>
+
+    <form method="post">
+        <div>
+            <label>Marca</label>
+            <input asp-for="Brand" />
+        </div>
+
+        <div>
+            <label>Modelo</label>
+            <input asp-for="Model" />
+        </div>
+
+        <div>
+            <label>Placa</label>
+            <input asp-for="Plate" />
+        </div>
+
+        <div>
+            <label>Precio por día</label>
+            <input asp-for="PricePerDay" />
+        </div>
+
+        <div>
+            <label>Estado</label>
+            <input asp-for="Status" />
+        </div>
+
+        <button type="submit">Guardar</button>
+    </form>
+}
