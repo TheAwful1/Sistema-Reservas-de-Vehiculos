@@ -42,21 +42,3 @@ Sistema orientado a la gestión de reservas donde los usuarios pueden selecciona
 ## 🗄 Base de Datos
 
 Ejecutar el script `Database.sql` en SQL Server para crear las tablas necesarias.
-
-## 🗂 Estructura del Proyecto
-📦 Proyecto
-┣ 📂 Controllers
-┃ ┣ UsersController.cs
-┃ ┣ VehiclesController.cs
-┃ ┗ ReservationsController.cs
-┣ 📂 Models 
-┃ ┣ User.cs
-┃ ┣ Vehicle.cs
-┃ ┣ Reservation.cs
-┃ ┗ ReservationViewModel.cs
-┣ 📂 Views
-┃ ┣ Users/ 
-┃ ┣ Vehicles/
-┃ ┗ Reservations/ 
-┗ 📂 Data
-┗ DbContext.cs
