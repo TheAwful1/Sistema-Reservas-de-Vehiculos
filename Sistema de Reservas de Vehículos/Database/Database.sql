@@ -1,0 +1,45 @@
+﻿CREATE DATABASE VehicleReservationsDB;
+GO
+
+USE VehicleReservationsDB;
+GO
+
+-- USERS
+CREATE TABLE Users (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(150) NOT NULL UNIQUE,
+    PasswordHash VARCHAR(255) NOT NULL,
+    Role VARCHAR(20) NOT NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE()
+);
+GO
+
+-- VEHICLES
+CREATE TABLE Vehicles (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Brand VARCHAR(100) NOT NULL,
+    Model VARCHAR(100) NOT NULL,
+    Plate VARCHAR(50) NOT NULL UNIQUE,
+    PricePerDay DECIMAL(10,2) NOT NULL,
+    Status VARCHAR(20) NOT NULL
+);
+GO
+
+-- RESERVATIONS
+CREATE TABLE Reservations (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    UserId INT NOT NULL,
+    VehicleId INT NOT NULL,
+    StartDate DATETIME NOT NULL,
+    EndDate DATETIME NOT NULL,
+    TotalPrice DECIMAL(10,2) NOT NULL,
+    Status VARCHAR(20) NOT NULL,
+
+    CONSTRAINT FK_Reservations_Users
+        FOREIGN KEY (UserId) REFERENCES Users(Id),
+
+    CONSTRAINT FK_Reservations_Vehicles
+        FOREIGN KEY (VehicleId) REFERENCES Vehicles(Id)
+);
+GO
