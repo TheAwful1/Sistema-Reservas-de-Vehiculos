@@ -39,6 +39,9 @@ Sistema orientado a la gestión de reservas donde los usuarios pueden selecciona
 - Razor Views
 
 ---
+## 🗄 Base de Datos
+
+Ejecutar el script `Database.sql` en SQL Server para crear las tablas necesarias.
 
 ## 🗂 Estructura del Proyecto
 📦 Proyecto
